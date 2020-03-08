@@ -7,7 +7,7 @@
 if (!defined('ABSPATH')) die();
 
 //enque divi theme
-function ideakit_ct_enqueue_parent() {
+function churchkit_ct_enqueue_parent() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'churchkit_ct_enqueue_parent' );
@@ -15,7 +15,7 @@ add_action( 'wp_enqueue_scripts', 'churchkit_ct_enqueue_parent' );
 //Check for theme updates
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-  'https://github.com/Nerd-Intelligence-Agency/ChurchKit-Theme',
+  'https://github.com/Nerd-Intelligence-Agency/churchkit-theme',
   __FILE__,
   'churchkit-theme'
 );
